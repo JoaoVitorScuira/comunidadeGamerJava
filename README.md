@@ -1,3 +1,3 @@
 # Comunidade para Gamers
-Projeto requisitado para aprovação na matéria Desenvolvimento de Software
+Projeto requisitado para aprovação na matéria Desenvolvimento de Software <br>
 Objetivo: Desenvolver um software em java, utilizando orientação a objetos e arquitetura MVC.
