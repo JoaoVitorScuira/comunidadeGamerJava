@@ -13,12 +13,11 @@ public class Principal {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
 		int op;
-		User user; //criação do objeto user do tipo User;
 		Publicacao publicacao;
 		Noticia noticia;
-		Game gamePreferido;
+
 		Forum forum;
-		ArrayList<User> users = new ArrayList<User>(); //criação da lista de users, para armazenar todos os users listados
+		
 		ArrayList<Publicacao> publicacoes = new ArrayList<Publicacao>();
 		ArrayList<Noticia> noticias = new ArrayList<Noticia>();
 		do {
@@ -26,26 +25,10 @@ public class Principal {
 			switch (op) {
 				
 				case 1 :
-					user = new User();
-					System.out.println("\n --Cadastro de Usuários--\n");
-					teclado = new Scanner (System.in);
-					System.out.println("\n Digite o nick: ");
-					user.setNickname(teclado.nextLine()	);
-					System.out.println("\n Digite a idade:");
-					user.setIdade(teclado.nextLine());
-					gamePreferido = new Game();
-					System.out.println("\n Digite o nome do game preferido do usuário: ");
-					gamePreferido.setNome(teclado.nextLine());
-					System.out.println("\n Digite o ano do game: ");
-					gamePreferido.setAno(teclado.nextLine());
-					System.out.println("\n Digite a desenvolvedora do game: ");
-					gamePreferido.setDesenvolvedora(teclado.nextLine());
-					user.setGame(gamePreferido);
-					users.add(user);
-					break;					
+					CadastrarUsuario.renderizar();
+					break;
 				case 2 :
-					System.out.println("\n --Lista de Usuários Cadastrados-- \n");
-					System.out.println(users);
+					ListarUsuarios.renderizar();
 					break;
 				case 3 :
 					publicacao = new Publicacao();
