@@ -2,23 +2,15 @@ package views;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import models.User;
-import models.Publicacao;
 import models.Noticia;
-import models.Game;
 import models.Forum;
-import views.Menu;
+
 
 public class Principal {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
 		int op;
-		Publicacao publicacao;
 		Noticia noticia;
-
-		Forum forum;
-		
-		ArrayList<Publicacao> publicacoes = new ArrayList<Publicacao>();
 		ArrayList<Noticia> noticias = new ArrayList<Noticia>();
 		do {
 			op = Menu.renderizar();
@@ -31,24 +23,15 @@ public class Principal {
 					ListarUsuarios.renderizar();
 					break;
 				case 3 :
-					publicacao = new Publicacao();
-					System.out.println("\n--Publicação no fórum--\n");
-					teclado = new Scanner (System.in);
-					forum = new Forum();
-					System.out.println("\n Digite a Categoria: ");
-					forum.setCategoria(teclado.nextLine());
-					publicacao.setForum(forum);
-					System.out.println("\n Digite o titulo:");
-					publicacao.setTitulo(teclado.nextLine());
-					System.out.println("\n Digite o conteudo:");
-					publicacao.setConteudo(teclado.nextLine());					
-					publicacoes.add(publicacao);
+					CadastrarPublicacao.renderizar();
 					break;
 				case 4 :
-					System.out.println("\n --Lista de publicacoes-- \n");
-					System.out.println(publicacoes);
+					ListarPublicacao.renderizar();
 					break;
 				case 5 :
+					ListarPublicacaoCategoria.renderizar();
+					break;
+				case 6:
 					noticia = new Noticia();
 					System.out.println("\n --Publicacao de Noticias-- \n");
 					teclado = new Scanner(System.in);
@@ -59,8 +42,7 @@ public class Principal {
 					System.out.println("\n Digite o conteudo:");
 					noticia.setConteudo(teclado.nextLine());	
 					noticias.add(noticia);
-					break;
-				case 6:
+					
 					System.out.println("\n --Listagem de Noticias-- \n");
 					System.out.println(noticias);
 					break;
@@ -68,7 +50,7 @@ public class Principal {
 					System.out.println("\n\n\nFinalizando o programa!");
 					break;
 				default :
-					System.out.println("Essa opção não existe: " + op +" - Digite a opção correta");
+					System.out.println("Essa opï¿½ï¿½o nï¿½o existe: " + op +" - Digite a opï¿½ï¿½o correta");
 			}
 		} while (op != 0);
 		teclado.close();

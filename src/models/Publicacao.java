@@ -6,16 +6,25 @@ public class Publicacao {
 		setCriadoEm(new Date());
 	}
 	
-	private String user;
+
+	private User user;
 	private Forum forum;
 	private String titulo;
 	private String conteudo;
-	private Date criadoEm;
+	private String categoria;
 	
-	public String getUser() {
+	public String getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+	private Date criadoEm;
+
+	public User getUser() {
 		return user;
 	}
-	public void setUser(String user) {
+	public void setUser(User user) {
 		this.user = user;
 	}
 	public Forum getForum() {
@@ -45,7 +54,7 @@ public class Publicacao {
 	
 	public String toString() {
 		return "Categoria da noticia: " + getForum().getCategoria() + " \n Titulo: " + getTitulo() 
-		+ "\n Notícia: " + getConteudo() + "\n Criado em: " + criadoEm + "\n Por: " + getUser();
+		+ "\n NotÃ­cia: " + getConteudo() + "\n Criado em: " + criadoEm + "\n Por: " + getUser();
 	}
 	
 }

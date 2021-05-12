@@ -1,21 +1,21 @@
 package views;
 import java.util.Scanner;
 public class Menu {
-	@SuppressWarnings("unused")
+
 	static int renderizar(){
 		int op;
 		Scanner teclado = new Scanner(System.in);
-		System.out.println("\n\n _____________________________");
+		System.out.println("\n\n _____________________________\n");
 		System.out.println(" Bem Vindo a comunidade Gamer!\n");
-		System.out.println("\n Digite a opção desejada no menu a baixo:\n");
-		System.out.println("\n Opção 1 - Cadastrar Usuário");
-		System.out.println("\n Opção 2 - Listar usuários");
-		System.out.println("\n Opção 3 - Publicar no fórum");
-		System.out.println("\n Opção 4 - Listar publicações do fórum");
-		System.out.println("\n Opção 5 - Publicar notícias");
-		System.out.println("\n Opção 6 - Listar notícias");
-		System.out.println("\n Opção 0 - Sair\n");
-		System.out.println("\n Digite a opção escolhida:");
+		System.out.println("\n Digite a opÃ§Ã£o desejada no menu a baixo:\n");
+		System.out.println("\n OpÃ§Ã£o 1 - Cadastrar UsuÃ¡rio");
+		System.out.println("\n OpÃ§Ã£o 2 - Listar usuÃ¡rios");
+		System.out.println("\n OpÃ§Ã£o 3 - Publicar no fÃ³rum");
+		System.out.println("\n OpÃ§Ã£o 4 - Listar publicaÃ§Ãµes do fÃ³rum");
+		System.out.println("\n OpÃ§Ã£o 5 - Listar publicaÃ§Ãµes por categoria!");
+		System.out.println("\n OpÃ§Ã£o 6 - Listar notÃ­cias");
+		System.out.println("\n OpÃ§Ã£o 0 - Sair\n");
+		System.out.println("\n Digite a OpÃ§Ã£o escolhida:");
 		op = teclado.nextInt();
 		return op;
 	}

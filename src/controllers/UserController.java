@@ -5,7 +5,7 @@ import models.User;
 
 public class UserController {
 	
-	private static ArrayList<User> users = new ArrayList<User>(); //criação da lista de users, para armazenar todos os users listados
+	private static ArrayList<User> users = new ArrayList<User>();
 	
 	public static ArrayList<User> listar(){
 		return users;
