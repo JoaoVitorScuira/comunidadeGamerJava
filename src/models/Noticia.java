@@ -7,7 +7,7 @@ public class Noticia {
 	public Noticia() {
 		setCriadoEm(new Date());
 	}
-	private String user;
+	private User user;
 	private String categoria;
 	private String titulo;
 	private String conteudo;
@@ -19,10 +19,10 @@ public class Noticia {
 	public void setCriadoEm(Date criadoEm) {
 		this.criadoEm = criadoEm;
 	}
-	public String getUser() {
+	public User getUser() {
 		return user;
 	}
-	public void setUser(String user) {
+	public void setUser(User user) {
 		this.user = user;
 	}
 	public String getCategoria() {
@@ -45,8 +45,9 @@ public class Noticia {
 	}
 	
 	
+	
 	public String toString() {
-		return "\nCategoria: " + getCategoria() + " \n Titulo: " + getTitulo() 
-		+ "\n Notícia: " + getConteudo() + "\n Criado em: " + criadoEm + "\n Por: " + getUser()+"\n";
+		return "Categoria da noticia: " +getCategoria() + " \n Titulo: " + getTitulo() 
+		+ "\n NotÃ­cia: " + getConteudo() + "\n Criado em: " + criadoEm + "\n Por: " + getUser();
 	}
 }

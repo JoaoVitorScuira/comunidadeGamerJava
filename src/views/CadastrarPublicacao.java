@@ -15,7 +15,7 @@ public class CadastrarPublicacao {
 		public static void renderizar() {
 			publicacao = new Publicacao();
 		
-			System.out.println("\n--Publica��o no f�rum--\n");
+			System.out.println("\n\n Publicação no fórum! \n\n");
 			teclado = new Scanner (System.in);
 			userPublicacao = new User();
 			System.out.println("\n Digite o NickName do usuário: \n");

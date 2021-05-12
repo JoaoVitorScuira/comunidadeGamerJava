@@ -10,29 +10,12 @@ public class PublicacaoController {
 			return publicacoes;
 		}
 		
-		@SuppressWarnings("unlikely-arg-type")
-		public static boolean listarPorCategoria(String categoria){
-			if (publicacoes.contains(categoria)) {
-				for (Publicacao publicacao : publicacoes) {
-					if(categoria == publicacao.getCategoria() ) {
-						System.out.println(publicacao);
-					}
-				}
-			return true;				
-			}
-			else {
-				System.out.println("\n\nNão há nenhuma publicação com essa categoria!\n\n");
-				return false;
-			}
-		}
-		
 		public static boolean cadastrar (Publicacao publicacao) {
 			if ((UserController.listar()).contains(publicacao.getUser())) {
 				publicacoes.add(publicacao);
 				return true;
-			}else {
-			return false;
 			}
+			return false;
 		}
 		
 }

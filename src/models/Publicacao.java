@@ -53,8 +53,8 @@ public class Publicacao {
 	}
 	
 	public String toString() {
-		return "Categoria da noticia: " + getForum().getCategoria() + " \n Titulo: " + getTitulo() 
-		+ "\n Notícia: " + getConteudo() + "\n Criado em: " + criadoEm + "\n Por: " + getUser();
+		return "Categoria da publicação: " +getCategoria() + " \n Titulo: " + getTitulo() 
+		+ "\n Publicação: " + getConteudo() + "\n Criado em: " + criadoEm + "\n Por: " + getUser();
 	}
 	
 }
